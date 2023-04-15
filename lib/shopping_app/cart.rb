@@ -1,10 +1,12 @@
 require_relative "item_manager"
 require_relative "ownable"
-require_relative "item"
 
 class Cart
   include ItemManager
   include Ownable
+
+  attr_accessor :owner
+
 
   def initialize(owner)
     self.owner = owner
